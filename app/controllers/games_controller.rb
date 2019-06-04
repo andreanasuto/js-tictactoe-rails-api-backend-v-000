@@ -28,7 +28,7 @@ class GamesController < ApplicationController
   end
 
   def setGame
-
+    @game = Game.find(params[:id])
   end
 
 end
