@@ -1,5 +1,7 @@
 class GamesController < ApplicationController
   # Add your GamesController code here
+  before_action :set_game, only: [:show, :update]
+  
   def create
     @game = Game.new(state: params[:state])
     @game.save
@@ -24,6 +26,10 @@ class GamesController < ApplicationController
 
   def game_params
     params.permit(state: [])
+  end
+
+  def setGame
+
   end
 
 end
