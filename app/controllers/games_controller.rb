@@ -27,7 +27,7 @@ class GamesController < ApplicationController
     params.permit(state: [])
   end
 
-  def setGame
+  def set_game
     @game = Game.find(params[:id])
   end
 
